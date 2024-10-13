@@ -1,0 +1,104 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="stylesssssssssssssssss.css">  
+    <title>Asr El Kababgy Menu</title>  
+    <style>  
+        #content {  
+            font-size: 24px;  
+            margin: 20px 0;  
+            text-align: center;  
+        }  
+        button {  
+            margin: 5px;  
+            padding: 10px 20px;  
+            font-size: 16px;  
+        }  
+        .credits {  
+            margin-top: 40px;  
+            text-align: center;  
+            font-style: italic;  
+            color: #f1f1f1;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+        <h1>Asr El Kababgy Menu</h1> 
+        <div style="text-align: left;">
+            <h1> Breakfast:</h1>
+        </div> 
+        <div class="menu-section">  
+            <div class="menu-category">  
+                <h2> Meal 1</h2>  
+                <div class="menu-item">  
+                    <img src="3.jpeg" alt="Food Title 1">  
+                    <h3>The Breakfast Trio</h3>  
+                    <p>The Breakfast Trio is a classic Egyptian morning delight that combines three essential components: crispy taameya, fluffy eggs, and warm baladi bread. This hearty meal is perfect for starting your day with traditional flavors.</p>  
+                    <button><a href="https://www.menuegypt.com/kasr-el-kababgy">ORDER NOW</a></button>  
+                    <span>75 egp</span>  
+                </div>  
+            </div>  
+
+            <div class="menu-category">  
+                <h2> Meal 2 </h2>  
+                <div class="menu-item">  
+                    <img src="2.jpeg" alt="Food Title 3">  
+                    <h3>Kababgy Fava Delight</h3>  
+                    <p> A hearty bowl of fava bean stew, spiced with cumin and garlic, served with warm pita bread and a side of tangy pickles. Perfectly balanced flavors that provide a nutritious start to your day.</p>
+                    <button><a href="https://www.menuegypt.com/kasr-el-kababgy">ORDER NOW</a></button>  
+                    <span> 45 egp</span>  
+                </div>  
+            </div>  
+
+            <div class="menu-category">  
+                <h2> Meal 3</h2>  
+                <div class="menu-item">  
+                    <img src="6.jpeg" alt="Food Title 3">  
+             <h3> Shakshuka</h3>    
+             <p> Traditional shakshuka with poached eggs nestled in a rich tomato sauce, seasoned with bell peppers and topped with fresh herbs. Served with crusty bread for dipping, this dish combines warmth and zest for a delightful breakfast experience.</p>           
+                    <button><a href="https://www.menuegypt.com/kasr-el-kababgy">ORDER NOW</a></button>  
+                    <span>85 egp</span>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+
+    <button id="nextBtn" onclick="location.href='index2.html'">Next</button>  
+
+    <script>  
+        let currentIndex = 0;  
+
+        const contentDiv = document.getElementById('content');  
+        const backBtn = document.getElementById('backBtn');  
+        const nextBtn = document.getElementById('nextBtn');  
+
+        function updateContent() {  
+            contentDiv.textContent = items[currentIndex];  
+            backBtn.disabled = currentIndex === 0;     
+            nextBtn.disabled = currentIndex === items.length - 1; 
+        }  
+
+        backBtn.addEventListener('click', () => {  
+            if (currentIndex > 0) {  
+                currentIndex--;  
+                updateContent();  
+            }  
+        });  
+
+        nextBtn.addEventListener('click', () => {  
+            if (currentIndex < items.length - 1) {  
+                currentIndex++;  
+                updateContent();  
+            }  
+        });  
+
+        updateContent();  
+    </script>  
+     <div class="credits">  
+        <p>Credits: Hamza Alsayed, Omar Hagag, Marwan Wael, Yassin Ibrahim</p>  
+    </div>  
+</body>  
+</html>

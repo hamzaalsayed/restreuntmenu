@@ -1,0 +1,109 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="stylesssssssssssssssss.css">  
+    <title>Asr El Kababgy Menu</title>  
+    <style>  
+        #content {  
+            font-size: 24px;  
+            margin: 20px 0;  
+            text-align: left;  
+        }  
+        button {  
+            margin: 5px;  
+            padding: 10px 20px;  
+            font-size: 16px;  
+        }  
+        .credits {  
+            margin-top: 40px;  
+            text-align: center;  
+            font-style: italic;  
+            color: #f1f1f1;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+       
+        <div class="container">  
+            <h1>Asr El Kababgy Menu</h1>  
+            <div style="text-align: left;">
+                <h1> Dessert:</h1>
+            </div>   
+
+        <div class="menu-section">  
+            <div class="menu-category">  
+                <h2>Meal 1</h2>  
+                <div class="menu-item">  
+                    <img src="8.jpeg" alt="Food Title 1">  
+                    <h3>Basbousa</h3>  
+                    <p>Basbousa is a semolina-based cake that is sweetened with sugar syrup and often flavored with almonds or coconut. At Asr El Kababgy, this dessert is typically served in a diamond shape, showcasing its beautiful golden crust. The cake is moist and fluffy, with a syrup soaked into it, giving each bite a rich sweetness that pairs perfectly with a cup of Arabic coffee.</p>
+                    <button><a href="https://www.menuegypt.com/kasr-el-kababgy">ORDER NOW</a></button>  
+                    <span>20 egp</span>  
+                </div>  
+            </div>  
+
+            <div class="menu-category">  
+                <h2> Meal 2</h2>  
+                <div class="menu-item">  
+                    <img src="9.jpeg" alt="Food Title 3">  
+                    <h3>Umm Ali </h3>
+                    <p>This is a classic Egyptian dessert, often referred to as the Egyptian bread pudding. Umm Ali is made from layers of flaky pastry, mixed with a creamy blend of milk, sugar, and nuts such as pistachios and almonds. It is baked until golden and served warm, allowing the flavors to meld beautifully. Topped with raisins and a sprinkle of cinnamon, this dessert is both comforting and indulgent.</p>  
+                    <button><a href="https://www.menuegypt.com/kasr-el-kababgy">ORDER NOW</a></button>  
+                    <span>30 egp</span>  
+                </div>  
+            </div>  
+
+            <div class="menu-category">  
+                <h2> Meal 3</h2>  
+                <div class="menu-item">  
+                    <img src="7.jpeg" alt="Food Title 3">  
+                    <h3>Konafa </h3>  
+                    <p> A beloved Middle Eastern dessert, Konafa consists of thin noodle-like pastry that is layered with a mixture of nuts, sweet cheese, or cream. At Asr El Kababgy, their Konafa is usually served warm, drenched in a fragrant sugar syrup infused with rose or orange blossom water. The crispy exterior contrasts delightfully with the soft, sweet filling, making it a favorite among both locals and visitors.</p>
+                    <button><a href="https://www.menuegypt.com/kasr-el-kababgy">ORDER NOW</a></button>  
+                    <span>25 egp</span>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+    
+
+    <button id="backBtn" onclick="location.href='index2.html'">Back</button>  
+
+
+    <script>  
+        let currentIndex = 0;  
+
+        const contentDiv = document.getElementById('content');  
+        const backBtn = document.getElementById('backBtn');  
+        const nextBtn = document.getElementById('nextBtn');  
+
+        function updateContent() {  
+            contentDiv.textContent = items[currentIndex];  
+            backBtn.disabled = currentIndex === 0;      
+            nextBtn.disabled = currentIndex === items.length - 1; 
+        }
+
+        backBtn.addEventListener('click', () => {  
+            if (currentIndex > 0) {  
+                currentIndex--;  
+                updateContent();  
+            }  
+        });  
+
+        nextBtn.addEventListener('click', () => {  
+            if (currentIndex < items.length - 1) {  
+                currentIndex++;  
+                updateContent();  
+            }  
+        });  
+
+        updateContent();  
+    </script>  
+    <div class="credits">  
+        <p>Credits: Hamza Alsayed, Omar Hagag, Marwan Wael, Yassin Ibrahim</p>  
+    </div>  
+</body>  
+</html>

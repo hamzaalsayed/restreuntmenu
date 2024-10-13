@@ -1,0 +1,107 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="stylesssssssssssssssss.css">  
+    <title>Asr El Kababgy Menu</title>  
+    <style>  
+        #content {  
+            font-size: 24px;  
+            margin: 20px 0;  
+            text-align: center;  
+        }  
+        button {  
+            margin: 5px;  
+            padding: 10px 20px;  
+            font-size: 16px;  
+        }  
+        .credits {  
+            margin-top: 40px;  
+            text-align: center;  
+            font-style: italic;  
+            color: #f1f1f1;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+        <h1>Asr El Kababgy Menu</h1>  
+        <div style="text-align: left;">
+            <h1> Dinner:</h1>
+        </div> 
+
+        <div class="menu-section">  
+            <div class="menu-category">  
+                <h2> Meal 1</h2>  
+                <div class="menu-item">  
+                    <img src="5.jpeg" alt="Food Title 1">  
+                    <h3>  Kabab Halabi</h3>  
+                    <p>  Kabab Halabi features grilled skewers of marinated ground lamb or beef, infused with aromatic spices. Juicy and flavorful, it's served with pita bread, garlic sauce, and a fresh salad, embodying the essence of Middle Eastern cuisine in a deliciously satisfying meal.</p>
+                    <button><a href="https://www.menuegypt.com/kasr-el-kababgy">ORDER NOW</a></button>  
+                    <span> 150 egp</span>  
+                </div>  
+            </div>  
+
+            <div class="menu-category">  
+                <h2> Meal 2 </h2>  
+                <div class="menu-item">  
+                    <img src="1.jpeg" alt="Food Title 3">  
+                    <h3>Kabab El Farah</h3>  
+                    <p>Kabab El Farah: Tender skewers of marinated lamb or beef, grilled to perfection, accompanied by fragrant rice, grilled vegetables, and a tangy tahini sauce. This celebratory dish bursts with rich flavors, making it perfect for special gatherings</p>  
+                    <button><a href="https://www.menuegypt.com/kasr-el-kababgy">ORDER NOW</a></button>  
+                    <span>200 egp</span>  
+                </div>  
+            </div>  
+
+            <div class="menu-category">  
+                <h2>Meal 3</h2>  
+                <div class="menu-item">  
+                    <img src="4.jpeg" alt="Food Title 3">  
+                    <h3>Royal Mixed Grill Feast</h3>  
+                    <p>The "Royal Mixed Grill Feast" is a grand showcase of Middle Eastern flavors, featuring expertly grilled meats. It includes lamb chops, marinated and grilled to perfection with aromatic spices, shish tawook, which are tender chicken pieces with a garlic hint, and kofta kebabs, minced meat skewers mixed with fresh herbs. The platter is completed with beef kebabs, offering a juicy interior with a beautifully charred exterior. This combination of meats delivers a rich, flavorful experience perfect for any grill lover.</p>  
+                    <button><a href="https://www.menuegypt.com/kasr-el-kababgy">ORDER NOW</a></button>  
+                    <span>450 egp</span>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+
+    <button id="backBtn"  onclick="location.href='index1.html'">Back</button> 
+    <button id="nextBtn" onclick="location.href='index3.html'">Next</button>  
+
+
+    <script>  
+        let currentIndex = 0;  
+
+        const contentDiv = document.getElementById('content');  
+        const backBtn = document.getElementById('backBtn');  
+        const nextBtn = document.getElementById('nextBtn');  
+
+        function updateContent() {  
+            contentDiv.textContent = items[currentIndex];  
+            backBtn.disabled = currentIndex === 0;      
+            nextBtn.disabled = currentIndex === items.length - 1; 
+        }  
+
+        backBtn.addEventListener('click', () => {  
+            if (currentIndex > 0) {  
+                currentIndex--;  
+                updateContent();  
+            }  
+        });  
+
+        nextBtn.addEventListener('click', () => {  
+            if (currentIndex < items.length - 1) {  
+                currentIndex++;  
+                updateContent();  
+            }  
+        });  
+
+        updateContent();  
+    </script>  
+     <div class="credits">  
+        <p>Credits: Hamza Alsayed, Omar Hagag, Marwan Wael, Yassin Ibrahim</p>  
+    </div>  
+</body>  
+</html>
